@@ -1,0 +1,767 @@
+body{
+    margin: 0;
+    overflow: auto;
+    padding: 0 ;
+    font-family: Roboto, sans-serif;
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration:none;
+    color: #7289DA;
+}
+
+.App{
+    background-color: #171717;
+    color: #EDEDED;
+
+}
+.Header{
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: content-box;
+    background-color: #171717;
+    width: 100%;
+    position: fixed;
+
+
+}
+.Header_Margin{
+    height: 56px;
+}
+.Header_Block{
+    display: flex;
+
+    margin-left: 1rem;
+    height: 3rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+
+}
+.Header_Block_Logo{
+    display: flex;
+}
+.Header_Logo_Image{
+    pointer-events: none;
+    margin-right: 1rem;
+    height: 3rem;
+}
+.Header_Logo_Text{
+    margin: auto;
+    color: #EDEDED;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
+.Header_Button{
+    font-size: 16pt;
+    font-weight: bold;
+    background-color: #444444;
+    border: 0;
+    border-radius: 1.5rem;
+    padding: 0.3rem 0.65rem;
+    color: #EDEDED;
+    outline: 0;
+    transition: all .5s cubic-bezier(0,0,0.5, 1.5);
+    transition-property: background-color;
+}
+.Header_Button:hover{
+    background-color: #666666;
+
+}
+
+.Header_Button_Marketplace{
+    margin-right: 0.7rem;
+    font-weight: normal;
+}
+.Header_Button_About{
+    font-weight: normal;
+    
+    margin-right: 1.25rem;
+}
+.SearchBox{
+    width: 13rem;
+    margin: auto;
+    padding: 0 0 0 1rem;
+    position: relative;
+}
+.SearchBox_Input{
+    z-index: 1;
+    appearance: none;
+    padding: 0 0 0 1rem;
+    height: 2rem;
+    border-radius: 1.5em;
+    border:0;
+    outline: none;
+    width: calc(100% - 1rem);
+    transition: all .3s cubic-bezier(0,0,0.5, 1.5);
+    transition-property: width, border-radius;
+
+    position: relative;
+}
+.SearchBox_Input_Button {
+    height: 2rem ;
+    border: 0;
+    font-size: 12pt;
+    color: #EDEDED;
+    outline: none;
+    display: block;
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    background: #444444;
+    border-radius: 0 1.5em 1.5em 0;
+}
+
+.SearchBox_Input:not(:placeholder-shown) {
+    border-radius: 1.5em 0 0 1.5em;
+    width: calc(100% - 3.5rem);
+
+}
+
+.Header_RightSection{
+    display: flex;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.Divider{
+    display: inline-block;
+    background-color: #171717;
+    height: 1.5em;
+    width: 3px;
+    border-radius: 5px;
+
+}
+.Divider_Header{
+    background-color: #444444;
+    margin: auto 0;
+
+}
+.AccountContainer{
+    margin-left: 1rem;
+height: 100%;
+    width: 12rem;
+    display: flex;
+
+}
+.Header_Button_LoginAndSignup{
+    font-weight: normal;
+    font-size: 12pt;
+    margin: auto 0.25rem;
+}
+
+.MainContainer{
+    width: 100%;
+
+}
+.GuideContainer{
+   width: 100%;
+    background-color: #EDEDED;
+}
+.GuideContainer_Title{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 3rem;
+}
+.GuideContainer_Title > span{
+    font-size: 24pt;
+    color: #171717;
+    margin-left: 3rem;
+    font-weight: bold;
+}
+.GuideContainer_Guide{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    width: 75%;
+}
+
+.GuideContainer_GuideStep{
+    height: 275px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.GuideContainer_GuideStep_StepImage{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+}
+.GuideContainer_GuideStep_StepText{
+
+    font-weight: 400;
+    color: #171717  ;
+    font-size: 14pt;
+    margin: auto;
+    text-align: center;
+}
+.PopularNFT_Container{
+min-height: 400px;
+    background-color:#171717;
+    width: 100%;
+}
+.PopularNFT_Container_Title{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+
+
+}
+.PopularNFT_Container_Title > span{
+    margin-left: 3rem;
+    font-size: 26pt;
+    font-weight: bold;
+    color: #EDEDED;
+}
+.NFTMiniItem_Image{
+    border-radius: 20px 20px 0 0 ;
+    width:20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 15rem;
+    pointer-events: none;
+}
+.PopularNFT_Container_Carousel{
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+.NFTMiniItem{
+
+    border-radius: 20px;
+    background-color: #EDEDED;
+    min-height: 25rem;
+    box-shadow: 0 0 10px 0 rgba(17,17,17,0.7);
+    transition: all .2s cubic-bezier(0,0,0.5, 1.5);
+    transition-property: box-shadow;
+    color: #171717;
+
+}
+.NFTMiniItem:hover{
+    box-shadow: 0 0 10px 3px rgba(17,17,17,0.7);
+}
+.NFTMiniItem_Text{
+    display: flex;
+    flex-direction: column;
+}
+.NFTMiniItem_Text_Title{
+
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+
+    font-size: 14pt;
+
+}
+
+.NFTMiniItem_Text_Price{
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+    font-size: 10pt;
+}
+.NFTMiniItem_Text_Price_Value{
+    font-size: 14pt;
+    font-weight: bold;
+}
+.NFTMiniItem_Text_Author{
+    margin-left: 2.5rem;
+    font-size: 10pt;
+    color: #171717;
+}
+.NFTMiniItem_Text_Count{
+     text-align: right;
+
+    margin-right: 1rem;
+}
+.fa-external-link-alt{
+    font-size: 9pt;
+}
+.Footer{
+    width: 100%;
+
+}
+.Footer_Container{
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.Footer_logo{
+
+    height: 80px;
+}
+.Footer_Container_Links{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+}
+.Footer_Container_TextLinks{
+    display:flex;
+    width: 12rem;
+    justify-content: space-evenly;
+}
+.Footer_Container_Social{
+    display: flex;
+
+    justify-content: space-between;
+    font-size: 22pt;
+
+}
+.Footer_Container_SocialIcon{
+    color: #EDEDED;
+    transition: all 0.4s cubic-bezier(0,0,0.5,1.5) ;
+    transition-property: color;
+}
+
+.Footer_Container_SocialIcon_Twitter:hover{
+    color: dodgerblue;
+}
+
+.Footer_Container_SocialIcon_Instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Footer_Container_SocialIcon_Discord:hover{
+    color: #7289DA;
+}
+.Footer_Container_SocialIcon_Reddit:hover{
+    color: red;
+}
+.Footer_Container_Text{
+    align-items: center;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+.Footer_Container_Text > a {
+    color: #7289DA;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: all, 0.6s, cubic-bezier(0,0,0.5,1.5);
+    transition-property: text-decoration;
+}
+.Footer_Container_Text > a:hover {
+   text-decoration: underline;
+}
+.Divider_Footer{
+    width: 2px;
+    display: block;
+}
+.Describe_Container{
+
+    background-image:url("./images/DescribeBackground.jpg");
+    width: 100%;
+    height: calc(100vh - 3.5rem );
+    Background-attachment: fixed;
+    background-size: cover;
+
+
+}
+.Describe_Container_Title{
+    color: #171717;
+    text-shadow: #EDEDED 0 0 3px;
+    margin: auto auto auto 10%;
+    max-width: 60%;
+    font-size: 64pt;
+    font-weight: bold;
+}
+.Describe_Container_Gradient{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(rgba(17,17,17,0.1),rgba(237,237,237,1));
+}
+.Terms{
+    background: linear-gradient(rgba(17,17,17,1),rgba(44,44,44,1) );
+}
+.TermsContainer{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.TermsContainer_Title{
+    font-family: Arial,sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.TermsContainer_Article{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.TermsContainer_Article_Title{
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+.TermsContainer_Article_Text{
+    font-size: 11pt;
+
+}
+.Marketplace{
+    background: linear-gradient(rgba(17,17,17,1),rgba(237,237,237,1));
+}
+.Marketplace_Container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.Marketplace_Container_Title{
+    color: #EDEDED;
+    padding-top: 3rem;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.Marketplace_Filter{
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    background: #444444;
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+}
+.Marketplace_Filter_ParamBox{
+    display: flex;
+
+}
+.Marketplace_Filter_Parameter{
+    margin-right: 2rem;
+    outline: none;
+}
+.Marketplace_Filter_Parameter_Title{
+    margin-bottom: 0.5rem;
+    font-size: 14pt;
+    color: #EDEDED;
+    outline: none;
+
+}
+.Marketplace_Filter_Parameter_Selector{
+
+    outline: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #EDEDED;
+    min-width: 9rem;
+    margin-right: 1rem;
+
+}
+.MuiInputBase-input {
+    color: #EDEDED !important;
+}
+.Marketplace_Items{
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.Marketplace_Items > .NFTMiniItem{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.LoginAndSignupContainer{
+    background-image: linear-gradient(180deg, rgba(237,237,237,0.6) 0%, rgba(170,169,169,0.9) 24%, rgba(17,17,17,1) 100%), url("images/DescribeBackground.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    Background-attachment: fixed, fixed;
+    background-size: cover, cover;
+
+}
+.LoginAndSignupContainer_Box{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 600px;
+    min-width: 200px;
+    min-height: 450px;
+    max-height: 700px;
+    background-color: #171717;
+    border-radius: 14px;
+    box-shadow: 0 0 10px 3px rgba(44,44,44,1) ;
+}
+.LoginContainer{
+
+    margin: auto;
+    height: max-content;
+    min-width: 70%;
+}
+.formField{
+
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+.formField > div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px ;
+}
+.formField > label {
+    font-family: Roboto, sans-serif;
+    font-size: 14pt;
+    color: #EDEDED;
+    width: max-content;
+    margin-bottom: 0.5rem;
+
+}
+.formField > div> input{
+    outline: none;
+    font-size: 12pt;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+}
+.formSubmitButton{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    background-color: inherit;
+}
+.formSubmitButtonText{
+    background-color: #444444;
+    font-size: 14pt;
+    font-family: Roboto, sans-serif;
+    padding: 0.5rem 1rem;
+    color: #EDEDED;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0,0,0.5,1.5);
+    transition-property: background-color ;
+    cursor: pointer;
+}
+.formSubmitButtonText:hover{
+
+    background-color: #666666;
+}
+.ResetPassword_Title{
+    font-size: 16pt;
+    text-align: center;
+}
+.ResetPassword_Dialog{
+    font-size: 10pt;
+    text-decoration: underline;
+    color: #7289DA;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+.Header_Auth{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    height: max-content;
+}
+.Header_Logo_Image_Auth{
+    width: 100px;
+    height: 100px;
+
+}
+.Header_Logo_Text_Auth{
+    font-size: 26pt;
+}
+.NFTItemBackground{
+
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17,17,17,0.9);
+}
+.NFTItemContainer{
+    display: flex;
+    border-radius: 15px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+    height: 90%;
+    width: 90%;
+    background: white;
+    z-index: 2;
+
+
+}
+.NFTItem_PreviewContainer{
+    border-radius: 15px 0 0  15px;
+    background-color: whitesmoke;
+    flex: 0 1 50%;
+    display: flex;
+}
+.NFTItem_Preview{
+    max-width: 80%;
+    max-height: 90%;
+    margin: auto;
+
+}
+.NFTItem_DataContainer{
+    flex: 0 1 50%;
+    width: 90%;
+}
+.NFTItem_Data_Text{
+    font-size: 12pt;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+.NFTItem_Data_Text_Title{
+    font-weight: bold;
+    font-size: 24pt;
+
+}
+.NFTItem_Data_Text_Price{
+    margin-top: 0.5rem;
+}
+.NFTItem_Data_Text_Price_Volute{
+    font-size: 10pt;
+}
+.NFTItem_Data_Text_Price_Cost{
+    font-size: 14pt;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.NFTItem_BuyBtn{
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: max-content;
+
+    font-weight: normal;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 8px;
+}
+.AboutUs_Mission{
+    background: rgba(17,17,17,1);
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    justify-content: center;
+
+}
+.AboutUs_Text{
+    width: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+.AboutUs_Text_Left{
+
+    font-weight: bold;
+    font-size: 24pt;
+    text-align: right;
+    margin-right: 1rem;
+}
+.AboutUs_Text_Right{
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 14pt;
+
+}
+.AboutUs_Team{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+.AboutUs_Team_Title{
+    font-weight: bold;
+    font-size: 24pt;
+    text-align: center;
+}
+.AboutUs_Team_Text{
+    width: 30%;
+    min-width:200px;
+    text-align: center ;
+    font-size: 14pt;
+    margin: 2rem auto;
+}
+.AboutUs_Team_Avatar{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 9rem;
+    background-position: 50% 50%;
+    pointer-events: none;
+
+}
+.AboutUs_Team_Name{
+    width: 9rem;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.AboutUs_Team_Job{
+    font-style: italic;
+}
+.AboutUs_ContactUs{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: rgba(17,17,17,1);
+}
+.AboutUs_ContactUs_Text{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.AboutUs_ContactUs_Title{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 38pt;
+    font-weight: bold;
+}
+.AboutUs_ContactUs_Email{
+    margin-bottom: 2rem;
+}
+.AboutUs_ContactUs_Address{
+    margin-bottom: 2rem;
+}
+.AboutUs_ContactUs_Social{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.AboutUs_ContactUs_SocialIcon{
+    font-size: 32pt;
+}
