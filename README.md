@@ -1,2 +1,2 @@
 # DTNFT-Frontend
-Site avalible https://dtnft.herokuapp.com
+Site avalible https://ntnftmarketplace.netlify.app
